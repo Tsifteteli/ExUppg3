@@ -55,7 +55,7 @@ public class Player {
       int weaponDamage = 0;
       
       for(Item item : inventory) {
-         if (item instanceof Weapon) { //......................Hur lösa detta?
+         if (item instanceof Weapon) {
             if (item.getIncreaseDamageBy() > weaponDamage) {
                weaponDamage = item.getIncreaseDamageBy();
             }
@@ -76,11 +76,12 @@ public class Player {
    }
    
    //Ser om ett typ av item finns i spelarens inventory
-   public boolean inventoryContains() { //............................?
+   public boolean inventoryContains() { 
       for(Item item : inventory) {
          if (item instanceof Key) {
             return true;
-         } else {
+         }
+         else {
             return false;
          }
       }
