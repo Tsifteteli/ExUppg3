@@ -29,18 +29,22 @@ public class Player {
       //inventory ev onödigt att initiera till null här? Är ju ändå tom från början då inget stoppats i den än...?
    }
 
+   //Returnerar spelarens namn
    public String getName() {
       return name;
    }
 
+   //Returnerar spelarens health points
    public int getHealthPoints() {
       return healthPoints;
    }
 
+   //Ändrar spelarens health points
    public void setHealthPoints(int healthPoints) {
       this.healthPoints = healthPoints;
    }
    
+   //Återställer spelarens health points till 10
    public void drinkPotion() {
       healthPoints = 10;
       System.out.println("You drink the potion and is now fully healed to 10 health points.");
