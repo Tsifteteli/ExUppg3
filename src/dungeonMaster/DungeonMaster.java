@@ -22,7 +22,7 @@ public class DungeonMaster {
    private static void beginning() {
       
       System.out.println("Welcomme to Dungeon Master!"); 
-      System.out.println("What is your name?");
+      System.out.println("What is your name? Pleas type it an press [Enter]");
       
       Scanner input = new Scanner(System.in);
       String name = input.nextLine();
