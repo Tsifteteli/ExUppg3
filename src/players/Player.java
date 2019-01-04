@@ -13,11 +13,11 @@ import java.util.ArrayList;
 //Klass innehållandes saker rörandes spelaren
 public class Player {
    
-   String name;
-   int healthPoints;
-   int givesDamage;
-   Room position;
-   ArrayList<Item> inventory = new ArrayList<Item>();
+   private final String name;
+   private int healthPoints;
+   private final int givesDamage;
+   private Room position;
+   private ArrayList<Item> inventory = new ArrayList<Item>();
    
    
    //Konstruktor
