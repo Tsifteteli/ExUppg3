@@ -78,22 +78,12 @@ public class Player {
    //Ser om ett typ av item finns i spelarens inventory
    public boolean inventoryContains() { 
       for(Item item : inventory) {
-         if (item instanceof Key) {
+         if (item instanceof Key) {//...............................? Ändra för att göra så det funkar med valfri klass?
             return true;
          }
-         else {
-            return false;
-         }
       }
+      return false;
    }
-   /* Exempel från Josefs monopoly:
-   Player player = players.get(currentPlayer);
-            if(!player.getSkipTurn()) {
-                if(player instanceof User) {
-                    board.paintBoard();
-                    System.out.println("It is your turn, press Enter to continue");
-                    scanner.nextLine();
-                } */
    
    //Lägger till ett item i inventory och sätter attributet "item" hos rummet som är spelares position till null.
    public void addToInventory() {
