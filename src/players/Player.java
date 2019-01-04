@@ -75,10 +75,10 @@ public class Player {
       this.position = position;
    }
    
-   //Ser om ett typ av item finns i spelarens inventory
-   public boolean inventoryContains() { 
+   //Ser om Key-objekt finns i spelarens inventory
+   public boolean hasKey() { 
       for(Item item : inventory) {
-         if (item instanceof Key) {//...............................? Ändra för att göra så det funkar med valfri klass?
+         if (item instanceof Key) {//...............? Ändra för att göra så det funkar med valfri klass?
             return true;
          }
       }
