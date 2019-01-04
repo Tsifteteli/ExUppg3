@@ -33,7 +33,7 @@ public class DungeonMaster {
    }
    
    //introducerar miljön och skapar en dungeon
-   private static void introduction(Player player1) {
+   private static void introduction(Player player1) { // Kalla enteringTheDungeon() ist, skapa även smalDungeon i beginning och lägg denna i Dungeon. Alt gör som Josef och skapa Playerobjekt
       
       System.out.println("Welcome brave explorer" + player1.getName());
       System.out.println("You have arrived to the cave where the lost "
