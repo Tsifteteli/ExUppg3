@@ -11,7 +11,7 @@ package monsters;
  */
 public class Monster {
     
-    //klassvariablernas egenskaper defineras
+    //klassvariablerna deklareras
     private String name;
     private int healthPoints;
     private int givesDamage;
@@ -19,13 +19,13 @@ public class Monster {
     
     
     //konstruktorn defineras
-    public Monster () {
-        String name = "scorpilion";
-        int healthPoints = 8;
-        int givenDamages = 1;
-        String description = "a big monster with a long sharp tail"; 
+    public Monster (String name, int healthPoints, int givesDamages, String description) {
+        this.name = name;
+        healthPoints = 8;
+        givesDamage = 1;
+        description = description; 
     }
-    }
+    
    
 
     //metod get name
