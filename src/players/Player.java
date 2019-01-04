@@ -5,10 +5,16 @@ Amanda Nordmark, norama-6@student.ltu.se*/
 
 package players;
 
-/**
- *
- * @author Caroline
- */
+
+import dungeon.Room;
+import items.*;
+import java.util.ArrayList;
+
+//Klass innehållandes saker rörandes spelaren
 public class Player {
-   
+   String name;
+   int healthPoints;
+   int givesDamage;
+   Room position;
+   ArrayList<Item> inventory = new ArrayList<Item>();
 }
