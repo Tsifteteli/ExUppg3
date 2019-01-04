@@ -41,4 +41,8 @@ public class Player {
       this.healthPoints = healthPoints;
    }
    
+   public void drinkPotion() {
+      healthPoints = 10;
+      System.out.println("You drink the potion and is now fully healed to 10 health points.");
+   }
 }
