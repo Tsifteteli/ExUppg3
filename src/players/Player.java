@@ -75,4 +75,21 @@ public class Player {
       this.position = position;
    }
    
+   //Ser om ett typ av item finns i spelarens inventory
+   public boolean inventoryContains() { //............................?
+      for(Item item : inventory) {
+         if (item instanceof Key) {
+            return true;
+         } else {
+            return false;
+         }
+      }
+   }
+   /*Player player = players.get(currentPlayer);
+            if(!player.getSkipTurn()) {
+                if(player instanceof User) {
+                    board.paintBoard();
+                    System.out.println("It is your turn, press Enter to continue");
+                    scanner.nextLine();
+                } */
 }
