@@ -92,4 +92,10 @@ public class Player {
                     System.out.println("It is your turn, press Enter to continue");
                     scanner.nextLine();
                 } */
+   
+   //Lägger till ett item i inventory och sätter attributet "item" hos rummet som är spelares position till null.
+   public void addToInventory() {
+      inventory.add(position.getItem());
+      position.setItem(null);
+   }
 }
