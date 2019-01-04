@@ -47,5 +47,5 @@ public class DungeonMaster {
       
       Dungeon smalDungeon = new Dungeon(player1);
       smalDungeon.playGame();
-   }
+   } 
 }
