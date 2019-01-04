@@ -64,4 +64,15 @@ public class Player {
       int totalDamage = givesDamage + weaponDamage;
       return totalDamage;
    }
+   
+   //Returnerar spelarens position
+   public Room getPosition() {
+      return position;
+   }
+
+   //Ändrar spelarens position
+   public void setPosition(Room position) {
+      this.position = position;
+   }
+   
 }
