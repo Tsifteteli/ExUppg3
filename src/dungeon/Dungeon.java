@@ -13,5 +13,15 @@ public class Dungeon {
    
    private Player player1;
    private Room[][] dungeon;
-  
+   
+   
+   //Konstruktor
+   public Dungeon(Player player1) {
+      this.player1 = player1;
+      //dungeon = {{secondRoom, thirdRoom, outsideExit}, {entryRoom, fourthRoom, treasureChamber}, {firstRoom}};
+      dungeon = new Room [3][];
+      dungeon[0] = new Room [3];
+      dungeon[1] = new Room [3];
+      dungeon[2] = new Room [1];
+   }
 }
