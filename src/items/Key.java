@@ -9,6 +9,6 @@ package items;
  *
  * @author Caroline
  */
-public class Key {
+public class Key extends Item {
    
 }

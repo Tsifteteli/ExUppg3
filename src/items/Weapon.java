@@ -9,6 +9,6 @@ package items;
  *
  * @author Caroline
  */
-public class Weapon {
+public class Weapon extends Item {
    
 }

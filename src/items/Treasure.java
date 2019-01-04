@@ -9,6 +9,6 @@ package items;
  *
  * @author Caroline
  */
-public class Treasure {
+public class Treasure extends Item {
    
 }
