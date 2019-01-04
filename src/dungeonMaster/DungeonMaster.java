@@ -7,6 +7,7 @@ package dungeonMaster;
 
 
 import java.util.Scanner;
+import players.Player;
         
 //Klass innehållandes starten och slutet. Saker som sker utanför dungeon:en.
 public class DungeonMaster {
@@ -16,4 +17,17 @@ public class DungeonMaster {
       beginning();
    }
    
+   //börja spelet och skapar player
+   private static void beginning() {
+      
+      System.out.println("Welcomme to Dungeon Master!"); 
+      System.out.println("What is your name?");
+      
+      Scanner input = new Scanner(System.in);
+      String name = input.nextLine();
+      
+      Player player1 = new Player(name);
+
+		introducton(player1);
+   }
 }
