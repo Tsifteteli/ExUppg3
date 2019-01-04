@@ -5,10 +5,13 @@ Amanda Nordmark, norama-6@student.ltu.se*/
 
 package dungeon;
 
-/**
- *
- * @author Caroline
- */
+
+import players.Player;
+
+//Klass innehållandes saker som rör dungeonen som helhet
 public class Dungeon {
    
+   private Player player1;
+   private Room[][] dungeon;
+  
 }
