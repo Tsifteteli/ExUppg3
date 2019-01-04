@@ -9,6 +9,6 @@ package items;
  *
  * @author Caroline
  */
-public class Item {
+public abstract class Item {
    
 }
