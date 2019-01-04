@@ -28,5 +28,17 @@ public class Player {
       //position = ??? Hur ska detta skrivas?
       //inventory ev onödigt att initiera till null här? Är ju ändå tom från början då inget stoppats i den än...?
    }
+
+   public String getName() {
+      return name;
+   }
+
+   public int getHealthPoints() {
+      return healthPoints;
+   }
+
+   public void setHealthPoints(int healthPoints) {
+      this.healthPoints = healthPoints;
+   }
    
 }
