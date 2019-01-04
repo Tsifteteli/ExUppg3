@@ -86,7 +86,8 @@ public class Player {
          }
       }
    }
-   /*Player player = players.get(currentPlayer);
+   /* Exempel från Josefs monopoly:
+   Player player = players.get(currentPlayer);
             if(!player.getSkipTurn()) {
                 if(player instanceof User) {
                     board.paintBoard();
