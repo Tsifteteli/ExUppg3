@@ -5,10 +5,15 @@ Amanda Nordmark, norama-6@student.ltu.se*/
 
 package dungeonMaster;
 
-/**
- *
- * @author Caroline
- */
+
+import java.util.Scanner;
+        
+//Klass innehållandes starten och slutet. Saker som sker utanför dungeon:en.
 public class DungeonMaster {
+   
+   //mainmetod
+   public static void main(String[] args) {
+      beginning();
+   }
    
 }
