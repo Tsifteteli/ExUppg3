@@ -45,4 +45,19 @@ public class Player {
       healthPoints = 10;
       System.out.println("You drink the potion and is now fully healed to 10 health points.");
    }
+   
+   //Returnerar totala skadan en spelare gör inkl. eventuellt vapen.
+   public int getGivesDamage() {
+      int weaponDamage = 0;
+      
+      for(Item item : inventory) {
+         if (item instanceof Weapon) { //......................Hur lösa detta?
+            if (item.getIncreaseDamageBy() > weaponDamage) {
+               weaponDamage = item.getIncreaseDamageBy();
+            }
+         }
+      }
+      int totalDamage = givesDamage + weaponDamage;
+      return totalDamage;
+   }
 }
