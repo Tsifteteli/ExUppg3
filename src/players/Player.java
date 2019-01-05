@@ -7,6 +7,7 @@ package players;
 
 
 import dungeon.Room;
+import dungeon.Dungeon;
 import items.*;
 import java.util.ArrayList;
 
@@ -74,6 +75,11 @@ public class Player {
    public void setPosition(Room position) {
       this.position = position;
    }
+
+   //Returnerar spelarens inventory.
+   public ArrayList<Item> getInventory() {
+      return inventory;
+   }
    
    //Ser om Key-objekt finns i spelarens inventory.
    public boolean hasKey() { 
@@ -84,7 +90,7 @@ public class Player {
       }
       return false;
    }
-   
+      
    //Lägger till ett item i inventory och sätter attributet "item" hos rummet som är spelares position till null.
    public void addToInventory() {
       inventory.add(position.getItem());
