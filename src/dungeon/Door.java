@@ -12,12 +12,10 @@ package dungeon;    //hejhej
 public class Door {
    
     //klassvariablar deklareras
-private String name;
 private boolean locked;
 
 //konstruktor defineras
-public Door (String name, boolean locked) {
-    this.name = name;
+public Door(boolean locked) {
     this.locked = locked; 
 }
 
