@@ -3,38 +3,38 @@ D0019N Examinationsuppgift 3, Äventyrsspel
 Caroline Blomgren, carbol-8@student.ltu.se
 Amanda Nordmark, norama-6@student.ltu.se*/
 
-package dungeon;    //hejhej
+package dungeon;
 
-/**
- *
- * @author Caroline
- */
+
+//Klass innehållandes information som rör dörrar.
 public class Door {
    
-    //klassvariablar deklareras
+//klassvariablar deklareras
 private boolean locked;
 
-//konstruktor defineras
+//Konstruktor
 public Door(boolean locked) {
-    this.locked = locked; 
+   this.locked = locked; 
 }
 
     
 public boolean locked () {
-    return locked;
+   return locked;
 } 
 
 // metod för att initiera dörren till låst
 public void setLocked (boolean locked) {
-    this.locked = locked;
+   this.locked = locked;
 }
-    //metod setLocked
+
+//metod setLocked
 public void setName (String name) {
-    this.name = name;
+   this.name = name;
 }
-    //metod getLocked
+
+//metod getLocked
 public String name() {
-    return name;
+   return name;
 }
 
 
