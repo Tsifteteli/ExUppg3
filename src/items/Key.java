@@ -11,4 +11,14 @@ package items;
  */
 public class Key extends Item {
    
+    //klassvariablar
+   private String description;
+   private String name;
+   
+   //Konstruktor
+   public Key(String name) {
+      this.description = description;
+      this.name = name;  
+}
+ 
 }

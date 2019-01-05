@@ -10,5 +10,19 @@ package items;
  * @author Caroline
  */
 public abstract class Item {
+    
+    //klassvariablarna deklareras
+    private String description;
+    private String name;
+    
+     //metod hämtar och returerar värdet på description
+   public String getDescription () {
+      return description; 
+   }
+    //metod hämtar och returerar värdet på name
+   public String getName() {
+      return name;
+      
+   }      
    
 }

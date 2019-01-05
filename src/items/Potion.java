@@ -10,5 +10,15 @@ package items;
  * @author Caroline
  */
 public class Potion extends Item {
+    
+   //klassvariablar
+   String description;
+   String name;
+   
+   //Konstruktor
+   public Potion(String name) {
+      this.description = description;
+      this.name = name;  
+}
    
 }

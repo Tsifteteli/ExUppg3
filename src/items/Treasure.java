@@ -10,5 +10,15 @@ package items;
  * @author Caroline
  */
 public class Treasure extends Item {
+    
+        //klassvariablar
+   String description;
+   String name;
+   
+   //Konstruktor
+   public Treasure (String name) {
+      this.description = description;
+      this.name = name;  
+}
    
 }
