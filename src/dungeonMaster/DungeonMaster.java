@@ -15,11 +15,12 @@ public class DungeonMaster {
    
    private Player player1;
            
-   //mainmetod
+   //mainmetod.
    public static void main(String[] args) {
       new DungeonMaster();
    }
 
+   //konstruktor. Skapar objekt och kör spelet.
    private DungeonMaster() {
       beginning();
       introduction();
@@ -29,7 +30,7 @@ public class DungeonMaster {
    
    
    
-   //börja spelet och skapar en player
+   //inleda spelet och skapar en player
    private void beginning() {
       
       System.out.println("Welcomme to Dungeon Master!"); 
@@ -41,7 +42,7 @@ public class DungeonMaster {
       player1 = new Player(name);
    }
    
-   //introducerar miljön och skapar en dungeon
+   //introducera miljön
    private void introduction() { // Kalla enteringTheDungeon() ist, skapa även smalDungeon i beginning och lägg denna i Dungeon. Alt gör som Josef och skapa Playerobjekt
       
       System.out.println("Welcome brave explorer" + player1.getName());
