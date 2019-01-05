@@ -54,5 +54,5 @@ public class DungeonMaster {
               + "cave collapses behind you. "
               + "That kind of roar can only come from a dragon! "
               + "You better be careful.");
-   } 
+   }
 }
