@@ -46,14 +46,14 @@ public class DungeonMaster {
    //Introducerar miljön.
    private void introduction() {
       
-      System.out.println("Welcome brave explorer" + player1.getName());
+      System.out.println("\nWelcome brave explorer " + player1.getName() + "!");
       System.out.println("You have arrived to the cave where the lost "
-              + "treasure is supposed to be hidden. "
-              + "You are determined to find it and you enter the cave. "
-              + "Just a few steps in you hear an earth shattering roar! "
+              + "treasure is supposed to be hidden.\n"
+              + "You are determined to find it and you enter the cave.\n"
+              + "Just a few steps in you hear an earth shattering roar!\n"
               + "The whole mountain trembles, and the entrance to the "
-              + "cave collapses behind you. "
-              + "That kind of roar can only come from a dragon! "
-              + "You better be careful.");
+              + "cave collapses behind you.\n"
+              + "That kind of roar can only come from a dragon. "
+              + "You better be careful...");
    }
 }
