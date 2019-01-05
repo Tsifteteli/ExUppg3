@@ -35,6 +35,13 @@ public class Dungeon {
    //Kör spelordningen.
    public void playGame() {
       do {
+         Room playerPosition = player1.getPosition();
+         playerPosition.roomNarrative();
+         
+         Monster currentMonster = playerPosition.getMonster();
+         if (currentMonster != null) {
+            currentMonster.resolveBattle();
+         }
          
       } while(playerWin() == false);
    }
