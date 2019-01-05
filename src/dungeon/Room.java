@@ -21,7 +21,6 @@ public class Room {
     private Door doorWest;
     
     //Konstruktor
-
    public Room(String description, Item item, Monster monster, Door doorNorth, Door doorEast, Door doorSouth, Door doorWest) {
       this.description = description;
       this.item = item;
@@ -30,6 +29,65 @@ public class Room {
       this.doorEast = doorEast;
       this.doorSouth = doorSouth;
       this.doorWest = doorWest;
+   }
+   
+   //Beskriver rummets innehåll.
+   public void roomNarrative() {
+      System.out.println("You are " + description);
+      if (item != null) {
+         System.out.println(item.getDescription());
+      }
+      if (doorNorth != null) {
+         System.out.println("There is a door to the north.");
+      }
+      if (doorEast != null) {
+         System.out.println("There is a door to the east.");
+      }
+      if (doorSouth != null) {
+         System.out.println("There is a door to the south.");
+      }
+      if (doorWest != null) {
+         System.out.println("There is a door to the west.");
+      }
+      if (monster != null) {
+         System.out.println(monster.getDescription);
+         if (monster.getName() == "Dragon")
+            System.out.println(
+                  " .~))>>\n"+
+                  " .~)>>\n"+
+                  " .~))))>>>\n"+
+                  " .~))>> ___\n"+
+                  " .~))>>)))>> .-~))>>\n"+
+                  " .~)))))>> .-~))>>)>\n"+
+                  " .~)))>>))))>> .-~)>>)>\n"+
+                  " ) .~))>>))))>> .-~)))))>>)>\n"+
+                  " ( )@@*) //)>)))))) .-~))))>>)>\n"+
+                  " ).@(@@ //))>>))) .-~))>>)))))>>)>\n"+
+                  " (( @.@). //))))) .-~)>>)))))>>)>\n"+
+                  " )) )@@*.@@ ) //)>))) //))))))>>))))>>)>\n"+
+                  " (( ((@@@.@@ |/))))) //)))))>>)))>>)>\n"+
+                  " )) @@*. )@@ ) (\\_(\\-\\b |))>)) //)))>>)))))))>>)>\n"+
+                  " (( @@@(.@(@ . _/`-` ~|b |>))) //)>>)))))))>>)>\n"+
+                  " )* @@@ )@* (@) (@) /\\b|))) //))))))>>))))>>\n"+
+                  " (( @. )@( @ . _/ / / \\b)) //))>>)))))>>>_._\n"+
+                  " )@@ (@@*)@@. (6///6)- / ^ \\b)//))))))>>)))>> ~~-.\n"+
+                  " ( @jgs@@. @@@.*@_ VvvvvV// ^ \\b/)>>))))>> _. `bb\n"+
+                  " ((@@ @@@*.(@@ . - | o |' \\ ( ^ \\b)))>> .' b`,\n"+
+                  " ((@@).*@@ )@ ) \\^^^/ (( ^ ~)_ \\ / b `,\n"+
+                  " (@@. (@@ ). `-' ((( ^ `\\ \\ \\ \\ \\| b `.\n"+
+                  " (*.@* / (((( \\| | | \\ . b `.\n"+
+                  " / / ((((( \\ \\ / _.-~\\ Y, b ;\n"+
+                  " / / / (((((( \\ \\.-~ _.`\" _.-~`, b ;\n"+
+                  " / / `(((((() ) (((((~ `, b ;\n"+
+                  " _/ _/ `\"\"\"/ /' ; b ;\n"+
+                  " _.-~_.-~ / /' _.'~bb _.'\n"+
+                  " ((((~~ / /' _.'~bb.--~\n"+
+                  " (((( __.-~bb.-~\n"+
+                  " .' b .~~\n"+
+                  " :bb ,' \n"+
+                  " ~~~~\n");
+      }
+      
    }
    
 }
