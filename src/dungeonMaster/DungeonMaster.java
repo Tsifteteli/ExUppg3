@@ -13,13 +13,24 @@ import dungeon.Dungeon;
 //Klass innehållandes starten och slutet. Saker som sker utanför dungeon:en.
 public class DungeonMaster {
    
+   private Player player1;
+           
    //mainmetod
    public static void main(String[] args) {
+      new DungeonMaster();
+   }
+
+   private DungeonMaster() {
       beginning();
+      introduction();
+      Dungeon smalDungeon = new Dungeon(player1);
+      smalDungeon.playGame();
    }
    
+   
+   
    //börja spelet och skapar en player
-   private static void beginning() {
+   private void beginning() {
       
       System.out.println("Welcomme to Dungeon Master!"); 
       System.out.println("What is your name? Pleas type it an press [Enter]");
@@ -27,13 +38,11 @@ public class DungeonMaster {
       Scanner input = new Scanner(System.in);
       String name = input.nextLine();
       
-      Player player1 = new Player(name);
-
-		introduction(player1);
+      player1 = new Player(name);
    }
    
    //introducerar miljön och skapar en dungeon
-   private static void introduction(Player player1) { // Kalla enteringTheDungeon() ist, skapa även smalDungeon i beginning och lägg denna i Dungeon. Alt gör som Josef och skapa Playerobjekt
+   private void introduction() { // Kalla enteringTheDungeon() ist, skapa även smalDungeon i beginning och lägg denna i Dungeon. Alt gör som Josef och skapa Playerobjekt
       
       System.out.println("Welcome brave explorer" + player1.getName());
       System.out.println("You have arrived to the cave where the lost "
@@ -44,8 +53,5 @@ public class DungeonMaster {
               + "cave collapses behind you. "
               + "That kind of roar can only come from a dragon! "
               + "You better be careful.");
-      
-      Dungeon smalDungeon = new Dungeon(player1);
-      smalDungeon.playGame();
    } 
 }
