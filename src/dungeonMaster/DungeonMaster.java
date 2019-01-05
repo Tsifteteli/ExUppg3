@@ -26,6 +26,7 @@ public class DungeonMaster {
       introduction();
       Dungeon smalDungeon = new Dungeon(player1);
       smalDungeon.playGame();
+      //Lägg till gameEnding()
    }
    
    
