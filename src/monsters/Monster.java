@@ -28,8 +28,8 @@ public class Monster {
      //konstruktorn Dragon
    public Monster Dragon (String name, int healthPoints, int givesDamages, String description) {
       name = "Dragon";
-      healthPoints = 8;
-      givesDamage = 18;
+      healthPoints = 18;
+      givesDamage = 8;
       description = "a strong undefeeted dragon"; 
 }
    

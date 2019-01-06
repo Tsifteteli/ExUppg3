@@ -16,14 +16,17 @@ public class Weapon extends Item {
     
   
     //Konstruktor
-    public Weapon (String description, String name, int increaseDamageBy) {
+    public Weapon weapone (String description, String name, int increaseDamageBy) {
       description = description;
       name = name;
-      increaseDamageBy = 2;
-      
-}
+      increaseDamageBy = 2; 
+      {
+          
+      }  
+{      
     //metod get increaseDamageby
    public int getIncreaseDamageBy () {
       return increaseDamageBy;  
 }
 }
+

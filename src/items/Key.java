@@ -16,9 +16,10 @@ public class Key extends Item {
    private String name;
    
    //Konstruktor
-   public Key(String name) {
+   public Key(String description, String name) {
       this.description = description;
       this.name = name;  
 }
- 
+   
+   
 }
