@@ -21,9 +21,8 @@ public class Monster {
       healthPoints = 8;
       givesDamage = 1;
       description = "a big monster with a sharp tail"; 
+       return null;
    }
-
-   
    
      //konstruktorn Dragon
    public Monster Dragon (String name, int healthPoints, int givesDamages, String description) {
@@ -31,9 +30,9 @@ public class Monster {
       healthPoints = 18;
       givesDamage = 8;
       description = "a strong undefeeted dragon"; 
+       return null;
 }
-   
- 
+  
    //metod get name
    public String getName() {
       return name;
