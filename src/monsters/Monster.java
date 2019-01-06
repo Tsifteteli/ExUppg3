@@ -30,7 +30,7 @@ public class Monster {
       return name;
    }
 
- //metod set healtPoints
+ //metod set healtPoints 
    public void setHealthPoints (int healthPoints) {
        this.healthPoints = healthPoints;
    }
