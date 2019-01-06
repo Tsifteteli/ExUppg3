@@ -12,13 +12,13 @@ import monsters.*;
 //Klass innehållandes information om och saker som händer i rummen.
 public class Room {
    
-   private String description;
+   private final String description;
    private Item item;
    private Monster monster;
-   private Door doorNorth;
-   private Door doorEast;
-   private Door doorSouth;
-   private Door doorWest;
+   private final Door doorNorth;
+   private final Door doorEast;
+   private final Door doorSouth;
+   private final Door doorWest;
    
     
    //Konstruktor
@@ -109,5 +109,26 @@ public class Room {
    //Ändrar värde på monster.
    public void setMonster(Monster monster) {
       this.monster = monster;
+   }
+   
+   //Räknar ut resultatet av en strid mellan spelaren och ett monster.
+   public int resolveBattle(int playerHealth, int playerGivesDamage) {
+      
+      do {
+         System.out.println("The" + monster.getName() + "attacks you and does" + monster.getGivesDamage() + "damage.");
+         playerHealth -= monster.getGivesDamage();
+         if (playerHealth <= 0) {
+            break;
+         }
+         System.out.println("You attack the" + monster.getName + "and do" + playerGivesDamage + "damage");
+         monster.setHealthPoints(monster.getHealthPoints() - playerGivesDamage);
+         
+      } while (monster.getHealthPoints() > 0);
+      
+      if (monster.getHealthPoints() <= 0) {
+         System.out.println("You kill the" + monster.getName() + ".");
+         setMonster(null);
+      }        
+      return playerHealth;
    }
 }
