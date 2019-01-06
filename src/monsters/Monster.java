@@ -30,9 +30,9 @@ public class Monster {
       return name;
    }
 
-   //metod set healthPoints
-   public int setHealthPoints () {
-      return healthPoints;
+ //metod set healtPoints
+   public void setHealthPoints (int healthPoints) {
+       this.healthPoints = healthPoints;
    }
 
    //metod get healthPoints
