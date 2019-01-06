@@ -11,7 +11,9 @@ package items;
  */
 public class Weapon extends Item {
     
-    //klassvariabel
+    //klassvariabel 
+    private String description;
+    private String name;
     private int increaseDamageBy;
     
   
