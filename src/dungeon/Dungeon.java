@@ -9,6 +9,7 @@ package dungeon;
 import players.Player;
 import items.*;
 import monsters.*;
+import java.util.ArrayList;
 
 //Klass innehållandes saker som sker i dungeon:en och rör dungeon:en som helhet.
 public class Dungeon {
@@ -48,10 +49,29 @@ public class Dungeon {
             if (player1.getHealthPoints() <= 0) {
                break;
             }
-         }  
+         }
+         ArrayList choicesGiven = currentRoom.choices();
+         choicesGiven = addDrinkPotionChoice(choicesGiven);
+         
+         char choice = playerChoice(choicesGiven);//Läs in spelarens val och kolla om giltigt - metod - returnerar värde till choice
+         executeChoice(choicesGiven, choice);
+         
       } while(playerWin() == false);
    }
    
+   //Lägger till valmöjligheten att drika health potion om spelaren har ett sådant och har låg hälsa.
+   private ArrayList addDrinkPotionChoice(ArrayList choiceList) {
+      for(Item item : player1.getInventory()) {
+         if (item instanceof Potion) {
+            if (player1.getHealthPoints() < 10) {
+               System.out.println("Drink health potion [d] (You have " + player1.getHealthPoints() + " health points.");
+               choiceList.add("d");
+            }
+         }
+      }
+      return choiceList;
+   }
+           
    //Bör playerWin() ligga i player för att underlätta gameEnding(), alt gör även smalDungeon till instansvariabel och fixa en geter för dungeon-arrayen...........................?
    
    //Kollar om vinstförutsättningarna är uppfyllda. (Spelaren har skatten i sitt inventory och befinner sig utanför dungeon:en.)
