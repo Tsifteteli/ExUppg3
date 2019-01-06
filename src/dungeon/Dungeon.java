@@ -54,7 +54,7 @@ public class Dungeon {
          ArrayList choicesGiven = currentRoom.choices();
          choicesGiven = addDrinkPotionChoice(choicesGiven);
          
-         String choice = playerChoice(choicesGiven);//Läs in spelarens val och kolla om giltigt - metod - returnerar värde till choice
+         String choice = playerChoice(choicesGiven);
          executeChoice(choice);
          
       } while(playerWin() == false);
@@ -75,10 +75,8 @@ public class Dungeon {
    
    //Läser in spelarens val och kolla om det är giltigt.
    private String playerChoice(ArrayList choicesGiven) {
-      
       String choice;
       Scanner input = new Scanner(System.in);
-      
       do {
          try {
             choice = input.next();
@@ -90,8 +88,29 @@ public class Dungeon {
             System.out.println(e.getMessage());
          }       
       } while(!choicesGiven.contains(choice));
-      
       return choice;        
+   }
+   
+   //Verkställer spelarens val.
+   private void executeChoice(String choice) {
+      switch (choice){
+					case "p":
+                  player1.addToInventory();
+                  break;
+					case "n":
+                  //openDoor?
+                  break;
+					case "e":
+                  //openDoor?
+                  break;
+					case "s":
+                  //openDoor?
+                  break;
+					case "w":
+                  //openDoor?
+                  break;
+               case "d":
+                  player1.drinkPotion();
    }
    
    //Bör playerWin() ligga i player för att underlätta gameEnding(), alt gör även smalDungeon till instansvariabel och fixa en geter för dungeon-arrayen...........................?
