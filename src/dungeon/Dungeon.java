@@ -42,22 +42,24 @@ public class Dungeon {
          player1.setPosition(currentRoom);
          currentRoom.roomNarrative();
          
-         Monster currentMonster = playerPosition.getMonster();
+         Monster currentMonster = currentRoom.getMonster();
          if (currentMonster != null) {
-            currentMonster.resolveBattle();
-         }
-         
+            player1.setHealthPoints(currentRoom.resolveBattle(player1.getHealthPoints(), player1.getGivesDamage()));
+            if (player1.getHealthPoints() <= 0) {
+               break;
+            }
+         }  
       } while(playerWin() == false);
    }
    
-   //Bör playerWin() ligga i player för att underlätta gameEnding()...........................?
+   //Bör playerWin() ligga i player för att underlätta gameEnding(), alt gör även smalDungeon till instansvariabel och fixa en geter för dungeon-arrayen...........................?
    
    //Kollar om vinstförutsättningarna är uppfyllda. (Spelaren har skatten i sitt inventory och befinner sig utanför dungeon:en.)
    private boolean playerWin() {
       for(Item item : player1.getInventory()) {
          if (item instanceof Treasure) {
             if (player1.getPosition() == dungeon[0][2]) {
-               return true;
+               return true;   
             }
          }
       }
