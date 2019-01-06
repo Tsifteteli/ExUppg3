@@ -12,15 +12,16 @@ import monsters.*;
 //Klass innehållandes information om och saker som händer i rummen.
 public class Room {
    
-    private String description;
-    private Item item;
-    private Monster monster;
-    private Door doorNorth;
-    private Door doorEast;
-    private Door doorSouth;
-    private Door doorWest;
+   private String description;
+   private Item item;
+   private Monster monster;
+   private Door doorNorth;
+   private Door doorEast;
+   private Door doorSouth;
+   private Door doorWest;
+   
     
-    //Konstruktor
+   //Konstruktor
    public Room(String description, Item item, Monster monster, Door doorNorth, Door doorEast, Door doorSouth, Door doorWest) {
       this.description = description;
       this.item = item;
@@ -89,5 +90,24 @@ public class Room {
       }
       
    }
+
+   //Returnerar värdet på item.
+   public Item getItem() {
+      return item;
+   }
+
+   //Ändrar värde på item.
+   public void setItem(Item item) {
+      this.item = item;
+   }
+
+   //Returnerar värdet på monster.
+   public Monster getMonster() {
+      return monster;
+   }
    
+   //Ändrar värde på monster.
+   public void setMonster(Monster monster) {
+      this.monster = monster;
+   }
 }
