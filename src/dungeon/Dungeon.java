@@ -10,6 +10,7 @@ import players.Player;
 import items.*;
 import monsters.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 //Klass innehållandes saker som sker i dungeon:en och rör dungeon:en som helhet.
 public class Dungeon {
@@ -53,7 +54,7 @@ public class Dungeon {
          ArrayList choicesGiven = currentRoom.choices();
          choicesGiven = addDrinkPotionChoice(choicesGiven);
          
-         char choice = playerChoice(choicesGiven);//Läs in spelarens val och kolla om giltigt - metod - returnerar värde till choice
+         String choice = playerChoice(choicesGiven);//Läs in spelarens val och kolla om giltigt - metod - returnerar värde till choice
          executeChoice(choice);
          
       } while(playerWin() == false);
@@ -73,8 +74,24 @@ public class Dungeon {
    }
    
    //Läser in spelarens val och kolla om det är giltigt.
-   private char playerChoice(ArrayList choicesGiven) {
+   private String playerChoice(ArrayList choicesGiven) {
       
+      String choice;
+      Scanner input = new Scanner(System.in);
+      
+      do {
+         try {
+            choice = input.next();
+            choice.toLowerCase();
+            if (!choicesGiven.contains(choice)) {
+               throw new Exception("Ej giltigt val. Var god ange möjligt val.");
+            }
+         } catch (Exception e) {
+            System.out.println(e.getMessage());
+         }       
+      } while(!choicesGiven.contains(choice));
+      
+      return choice;        
    }
    
    //Bör playerWin() ligga i player för att underlätta gameEnding(), alt gör även smalDungeon till instansvariabel och fixa en geter för dungeon-arrayen...........................?
