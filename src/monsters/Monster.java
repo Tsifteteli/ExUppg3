@@ -30,7 +30,7 @@ public class Monster {
       return name;
    }
 
- //metod set healtPoints 
+ //metod set healtPoints (sätter healthPoints till 8 vid ny spelare) 
    public void setHealthPoints (int healthPoints) {
        this.healthPoints = healthPoints;
    }
