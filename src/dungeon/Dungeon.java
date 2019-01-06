@@ -54,24 +54,29 @@ public class Dungeon {
          choicesGiven = addDrinkPotionChoice(choicesGiven);
          
          char choice = playerChoice(choicesGiven);//Läs in spelarens val och kolla om giltigt - metod - returnerar värde till choice
-         executeChoice(choicesGiven, choice);
+         executeChoice(choice);
          
       } while(playerWin() == false);
    }
    
    //Lägger till valmöjligheten att drika health potion om spelaren har ett sådant och har låg hälsa.
-   private ArrayList addDrinkPotionChoice(ArrayList choiceList) {
+   private ArrayList addDrinkPotionChoice(ArrayList choicesGiven) {
       for(Item item : player1.getInventory()) {
          if (item instanceof Potion) {
             if (player1.getHealthPoints() < 10) {
                System.out.println("Drink health potion [d] (You have " + player1.getHealthPoints() + " health points.");
-               choiceList.add("d");
+               choicesGiven.add("d");
             }
          }
       }
-      return choiceList;
+      return choicesGiven;
    }
-           
+   
+   //Läser in spelarens val och kolla om det är giltigt.
+   private char playerChoice(ArrayList choicesGiven) {
+      
+   }
+   
    //Bör playerWin() ligga i player för att underlätta gameEnding(), alt gör även smalDungeon till instansvariabel och fixa en geter för dungeon-arrayen...........................?
    
    //Kollar om vinstförutsättningarna är uppfyllda. (Spelaren har skatten i sitt inventory och befinner sig utanför dungeon:en.)
