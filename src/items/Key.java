@@ -18,8 +18,8 @@ public class Key extends Item {
    
    //Konstruktor
    public Key(String description, String name) {
-      this.description = description;
-      this.name = name;
+      this.description = "beskrivning av key här";
+      this.name = "Key";
       
       
       
