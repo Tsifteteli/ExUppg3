@@ -3,6 +3,11 @@ D0019N Examinationsuppgift 3, Äventyrsspel
 Caroline Blomgren, carbol-8@student.ltu.se
 Amanda Nordmark, norama-6@student.ltu.se*/
 
+/*Spelet går ut på att hitta skatten och ta sig ut ur dungeon:en levande.
+Detta gör spelaren genom att navigera genom en dungeon:en, samla föremål och besegra monster.
+Vinner gör spelaren om hen har skatten i sitt inventory och befinner sig utanför dungeon:en.
+Förlorar gör spelaren om hen dör, dvs får 0 eller mindre i hälsa.*/
+
 package dungeonMaster;
 
 
