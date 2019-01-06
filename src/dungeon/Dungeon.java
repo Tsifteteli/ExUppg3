@@ -15,6 +15,7 @@ public class Dungeon {
    
    private Player player1;
    private Room[][] dungeon = new Room[3][3];
+   private Room currentRoom;
    
    
    //Konstruktor. Skapar en dungeon med innehåll.
@@ -30,13 +31,16 @@ public class Dungeon {
 		dungeon[1][1] = new Room("in a smaller room with brick walls lit by candles in candle holders. Piles of sticks, small rocks and miscellaneous dirt is laying in the corners.", new Potion(), null, new Door(false), new Door(true), null, null);
       dungeon[1][2] = new Room("in a gigantic hall.", new Treasure(), new Monster(), null, null, null, new Door(false));
       dungeon[2][0] = new Room("in a slightly bigger room that's not lit up at all. The only light is the one coming in through the door.", new Weapon(), null, new Door(false), null, null ,null);
+      
+      //Rummet spelaren startar i.
+      currentRoom = dungeon [1][0];
    }
    
    //Kör spelordningen.
    public void playGame() {
       do {
-         Room playerPosition = player1.getPosition();
-         playerPosition.roomNarrative();
+         player1.setPosition(currentRoom);
+         currentRoom.roomNarrative();
          
          Monster currentMonster = playerPosition.getMonster();
          if (currentMonster != null) {
@@ -46,6 +50,9 @@ public class Dungeon {
       } while(playerWin() == false);
    }
    
+   //Bör playerWin() ligga i player för att underlätta gameEnding()...........................?
+   
+   //Kollar om vinstförutsättningarna är uppfyllda. (Spelaren har skatten i sitt inventory och befinner sig utanför dungeon:en.)
    private boolean playerWin() {
       for(Item item : player1.getInventory()) {
          if (item instanceof Treasure) {
