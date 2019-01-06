@@ -12,13 +12,13 @@ package items;
 public class Potion extends Item {
     
    //klassvariablar
-   String description;
-   String name;
+   private String description;
+   private String name;
    
    //Konstruktor
    public Potion healthPotion (String description, String name) {
-      this.description = description;
-      this.name = name;
+      this.description = "en beskrivning av Potion här";
+      this.name = "Potion";
       
 }
    

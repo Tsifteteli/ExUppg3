@@ -12,8 +12,8 @@ package items;
 public class Treasure extends Item {
     
         //klassvariablar
-   String description;
-   String name;
+   private String description;
+   private String name;
    
    //Konstruktor
    public Treasure (String description, String name) {

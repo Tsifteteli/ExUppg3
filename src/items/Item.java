@@ -15,6 +15,7 @@ public abstract class Item {
     private String description;
     private String name;
     
+         
      //metod hämtar och returerar värdet på description
    public String getDescription () {
       return description; 
