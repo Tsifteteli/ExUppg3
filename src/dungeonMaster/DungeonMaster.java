@@ -19,7 +19,9 @@ import dungeon.Dungeon;
 public class DungeonMaster {
    
    private Player player1;
-           
+   Dungeon smalDungeon;
+    
+   
    //mainmetod.
    public static void main(String[] args) {
       new DungeonMaster();
@@ -29,9 +31,9 @@ public class DungeonMaster {
    private DungeonMaster() {
       beginning();
       introduction();
-      Dungeon smalDungeon = new Dungeon(player1);
+      smalDungeon = new Dungeon(player1);
       smalDungeon.playGame();
-      //Lägg till gameEnding()
+      gameEnding();
    }
    
    
@@ -61,4 +63,14 @@ public class DungeonMaster {
               + "That kind of roar can only come from a dragon. "
               + "You better be careful...");
    }
+   
+   //Slutet på spelet.
+   private void gameEnding() {
+      if (smalDungeon.playerWin() == true) {
+         System.out.println("Congratulations " + player1.getName() + "! You have won the game. You are a true Dungeon Master!");
+      }
+      else {
+         System.out.println("You are dead... RIP " + player1.getName() + "... Better luck next life...");
+      }
+   }    
 }
