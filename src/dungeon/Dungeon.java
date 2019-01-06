@@ -132,10 +132,8 @@ public class Dungeon {
       currentRoom = dungeon[i][j];
    }
    
-   //Bör playerWin() ligga i player för att underlätta gameEnding(), alt gör även smalDungeon till instansvariabel och fixa en geter för dungeon-arrayen...........................?
-   
    //Kollar om vinstförutsättningarna är uppfyllda. (Spelaren har skatten i sitt inventory och befinner sig utanför dungeon:en.)
-   private boolean playerWin() {
+   public boolean playerWin() {
       for(Item item : player1.getInventory()) {
          if (item instanceof Treasure) {
             if (player1.getPosition() == dungeon[0][2]) {
