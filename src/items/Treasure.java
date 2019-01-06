@@ -16,9 +16,9 @@ public class Treasure extends Item {
    String name;
    
    //Konstruktor
-   public Treasure (String name) {
-      this.description = description;
-      this.name = name;  
+   public Treasure (String description, String name) {
+      this.description = "beskrivning av treasure";
+      this.name = "Treasure";  
 }
    
 }

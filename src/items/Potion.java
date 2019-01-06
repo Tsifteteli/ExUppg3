@@ -16,9 +16,10 @@ public class Potion extends Item {
    String name;
    
    //Konstruktor
-   public Potion(String name) {
+   public Potion healthPotion (String description, String name) {
       this.description = description;
-      this.name = name;  
+      this.name = name;
+      
 }
    
 }
