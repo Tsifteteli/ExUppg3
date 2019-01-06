@@ -127,13 +127,13 @@ public class Room {
       } while (monster.getHealthPoints() > 0);
       
       if (monster.getHealthPoints() <= 0) {
-         System.out.println("You kill the " + monster.getName() + ", but you only have " + playerHealth + " healthpoints left.");
+         System.out.println("You kill the " + monster.getName() + ", but you only have " + playerHealth + " health points left.");
          setMonster(null);
       }        
       return playerHealth;
    }
    
-   //Frågar spelaren vad hen vill göra baserat på vad som finns i rummet, läser in spelarens val och ser till att det är giltigt.
+   //Frågar spelaren vad hen vill göra baserat på vad som finns i rummet.
    public ArrayList choices() {
       
       ArrayList<String> choices = new ArrayList<>();
