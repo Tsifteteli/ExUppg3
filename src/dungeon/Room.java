@@ -115,18 +115,18 @@ public class Room {
    public int resolveBattle(int playerHealth, int playerGivesDamage) {
       
       do {
-         System.out.println("The" + monster.getName() + "attacks you and does" + monster.getGivesDamage() + "damage.");
+         System.out.println("The " + monster.getName() + " attacks you and does " + monster.getGivesDamage() + " damage.");
          playerHealth -= monster.getGivesDamage();
          if (playerHealth <= 0) {
             break;
          }
-         System.out.println("You attack the" + monster.getName + "and do" + playerGivesDamage + "damage");
+         System.out.println("You attack the " + monster.getName + " and do " + playerGivesDamage + " damage");
          monster.setHealthPoints(monster.getHealthPoints() - playerGivesDamage);
          
       } while (monster.getHealthPoints() > 0);
       
       if (monster.getHealthPoints() <= 0) {
-         System.out.println("You kill the" + monster.getName() + ".");
+         System.out.println("You kill the " + monster.getName() + ", but you only have " + playerHealth + " healthpoints left.");
          setMonster(null);
       }        
       return playerHealth;
