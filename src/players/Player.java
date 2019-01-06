@@ -18,7 +18,7 @@ public class Player {
    private int healthPoints = 10;
    private final int givesDamage = 1;
    private Room position;
-   private ArrayList<Item> inventory = new ArrayList<Item>();
+   private ArrayList<Item> inventory = new ArrayList<>();
    
    
    //Konstruktor
