@@ -114,7 +114,6 @@ public class Room {
    
    //Räknar ut resultatet av en strid mellan spelaren och ett monster.
    public int resolveBattle(int playerHealth, int playerGivesDamage) {
-      
       do {
          System.out.println("The " + monster.getName() + " attacks you and does " + monster.getGivesDamage() + " damage.");
          playerHealth -= monster.getGivesDamage();
@@ -160,5 +159,37 @@ public class Room {
          choices.add("w");
       }
       return choices;
+   }
+   
+   //Returnerar huruvida spelaren kan öppna dörren och passera till nästa rum eller ej.
+   public boolean openDoor(String choice, boolean hasKey) {
+      Door currentDoor;
+      switch (choice){
+					case "n":
+                  currentDoor = doorNorth;
+                  break;
+					case "e":
+                  currentDoor = doorEast;
+                  break;
+					case "s":
+                  currentDoor = doorSouth;
+                  break;
+					case "w":
+                  currentDoor = doorWest;
+      }
+                  
+      if (currentDoor.isLocked() == true && hasKey == true) { //Dörren är låst, men spelaren har nyckel.
+         currentDoor.setLocked(false);
+         System.out.println("The door is locked, but the key you found fits perfectly in the lock. You turn the key and the door opens with a loud squeaky sound.");
+         return true;
+      }
+      else if (currentDoor.isLocked() == true && hasKey == false) { //Dörren är låst och spelaren har ingen nyckel.
+         System.out.println("The door is locked...");
+         return false;
+      }
+      else { //Dörren är ej låst.
+         System.out.println("The door is unlocked. You open it and enter the next room.");
+      }
+      return true;
    }
 }
