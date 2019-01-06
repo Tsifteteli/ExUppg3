@@ -110,6 +110,28 @@ public class Dungeon {
       }
    }
    
+   //Flyttar spelaren mellan två rum.
+   private void movePlayer(String choice) {
+      
+      int i; //startvärdena på i och j behöver vara som currentRoom
+		int j;
+
+      switch (choice){
+         case "n": // vid n - minska i med 1
+            i--;
+            break;
+         case "s": // vid s - öka i med 1
+            i++;
+            break;
+         case "w": // vid w - minska j med 1
+            j--;
+            break;
+         case "e": // vid e - öka j med 1
+            j++;
+      }
+      currentRoom = dungeon[i][j];
+   }
+   
    //Bör playerWin() ligga i player för att underlätta gameEnding(), alt gör även smalDungeon till instansvariabel och fixa en geter för dungeon-arrayen...........................?
    
    //Kollar om vinstförutsättningarna är uppfyllda. (Spelaren har skatten i sitt inventory och befinner sig utanför dungeon:en.)
