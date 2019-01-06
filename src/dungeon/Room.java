@@ -8,6 +8,7 @@ package dungeon;
 
 import items.*;
 import monsters.*;
+import java.util.ArrayList;
 
 //Klass innehållandes information om och saker som händer i rummen.
 public class Room {
@@ -130,5 +131,34 @@ public class Room {
          setMonster(null);
       }        
       return playerHealth;
+   }
+   
+   //Frågar spelaren vad hen vill göra baserat på vad som finns i rummet, läser in spelarens val och ser till att det är giltigt.
+   public ArrayList choices() {
+      
+      ArrayList<String> choices = new ArrayList<>();
+      
+      System.out.println("What do you want to do? Select a choice and press [Enter]");
+      if (item != null) {
+         System.out.println("Pick up" + item.getName() + " [p]");
+         choices.add("p");
+      }
+      if (doorNorth != null) {
+         System.out.println("Go north [n]");
+         choices.add("n");
+      }
+      if (doorEast != null) {
+         System.out.println("Go east [e]");
+         choices.add("e");
+      }
+      if (doorSouth != null) {
+         System.out.println("Go South [s]");
+         choices.add("s");
+      }
+      if (doorWest != null) {
+         System.out.println("Go west [w]");
+         choices.add("w");
+      }
+      return choices;
    }
 }
