@@ -15,8 +15,8 @@ import java.util.ArrayList;
 public class Player {
    
    private final String name;
-   private int healthPoints;
-   private final int givesDamage;
+   private int healthPoints = 10;
+   private final int givesDamage = 1;
    private Room position;
    private ArrayList<Item> inventory = new ArrayList<Item>();
    
@@ -24,10 +24,6 @@ public class Player {
    //Konstruktor
    public Player(String name) {
       this.name = name;
-      healthPoints = 10;
-      givesDamage = 1; //Onödigt att ge värde här om alla har 1? Sätt till 1 där instansvariabeln deklareras?
-      //position = ??? Hur ska detta skrivas?
-      //inventory ev onödigt att initiera till null här? Är ju ändå tom från början då inget stoppats i den än...?
    }
 
    //Returnerar spelarens namn.
@@ -51,7 +47,7 @@ public class Player {
       System.out.println("You drink the potion and is now fully healed to 10 health points.");
    }
    
-   //Returnerar totala skadan en spelare gör inkl. eventuellt vapen.
+   //Returnerar totala skadan en spelare gör, inkl. eventuellt vapen. Väljer det bästa vapnet om spelaren har flera.
    public int getGivesDamage() {
       int weaponDamage = 0;
       
@@ -81,17 +77,17 @@ public class Player {
       return inventory;
    }
    
-   //Ser om Key-objekt finns i spelarens inventory.
+   //Ser om något Key-objekt finns i spelarens inventory.
    public boolean hasKey() { 
       for(Item item : inventory) {
-         if (item instanceof Key) {//...............? Ändra för att göra så det funkar med valfri klass?
+         if (item instanceof Key) {
             return true;
          }
       }
       return false;
    }
       
-   //Lägger till ett item i inventory och sätter attributet "item" hos rummet som är spelares position till null.
+   //Lägger till det item som finns i rummet som är spelarens position till inventory och sätter attributet "item" hos rummet till null.
    public void addToInventory() {
       inventory.add(position.getItem());
       position.setItem(null);
