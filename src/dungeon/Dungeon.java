@@ -18,6 +18,8 @@ public class Dungeon {
    private Player player1;
    private Room[][] dungeon = new Room[3][3];
    private Room currentRoom;
+   private int i;
+   private int j;
    
    
    //Konstruktor. Skapar en dungeon med innehåll.
@@ -35,7 +37,9 @@ public class Dungeon {
       dungeon[2][0] = new Room("in a slightly bigger room that's not lit up at all. The only light is the one coming in through the door.", new Weapon(), null, new Door(false), null, null ,null);
       
       //Rummet spelaren startar i.
-      currentRoom = dungeon [1][0];
+      i = 1;
+      j = 0;
+      currentRoom = dungeon [i][j];
    }
    
    //Kör spelordningen.
@@ -112,21 +116,17 @@ public class Dungeon {
    
    //Flyttar spelaren mellan två rum.
    private void movePlayer(String choice) {
-      
-      int i; //startvärdena på i och j behöver vara som currentRoom
-		int j;
-
       switch (choice){
-         case "n": // vid n - minska i med 1
+         case "n": // vid n: minska i med 1
             i--;
             break;
-         case "s": // vid s - öka i med 1
+         case "s": // vid s: öka i med 1
             i++;
             break;
-         case "w": // vid w - minska j med 1
+         case "w": // vid w: minska j med 1
             j--;
             break;
-         case "e": // vid e - öka j med 1
+         case "e": // vid e: öka j med 1
             j++;
       }
       currentRoom = dungeon[i][j];
