@@ -15,16 +15,25 @@ public class Monster {
    private String description;
     
     
-   //konstruktorn defineras
-   public Monster (String name, int healthPoints, int givesDamages, String description) {
-      this.name = name;
+   //konstruktor Scorpilion
+   public Monster Scorpilion (String name, int healthPoints, int givesDamages, String description) {
+      name = "Scorplion";
       healthPoints = 8;
       givesDamage = 1;
-      description = description; 
+      description = "a big monster with a sharp tail"; 
    }
-    
-   
 
+   
+   
+     //konstruktorn Dragon
+   public Monster Dragon (String name, int healthPoints, int givesDamages, String description) {
+      name = "Dragon";
+      healthPoints = 8;
+      givesDamage = 18;
+      description = "a strong undefeeted dragon"; 
+}
+   
+ 
    //metod get name
    public String getName() {
       return name;
