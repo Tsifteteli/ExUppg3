@@ -98,19 +98,16 @@ public class Dungeon {
                   player1.addToInventory();
                   break;
 					case "n":
-                  //openDoor?
-                  break;
 					case "e":
-                  //openDoor?
-                  break;
 					case "s":
-                  //openDoor?
-                  break;
 					case "w":
-                  //openDoor?
+                  if (currentRoom.openDoor(choice, player1.hasKey()) == true) {
+                     movePlayer(choice);
+                  }
                   break;
                case "d":
                   player1.drinkPotion();
+      }
    }
    
    //Bör playerWin() ligga i player för att underlätta gameEnding(), alt gör även smalDungeon till instansvariabel och fixa en geter för dungeon-arrayen...........................?
