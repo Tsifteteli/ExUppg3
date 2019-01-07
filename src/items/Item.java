@@ -21,5 +21,10 @@ public abstract class Item {
    //Returnerar name.
    public String getName() {
       return name;  
-   }      
+   }
+   
+   //Returnerar increaseDamageby
+   public int getIncreaseDamageBy() {
+      return 0;  
+   }
 }
