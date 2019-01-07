@@ -5,25 +5,21 @@ Amanda Nordmark, norama-6@student.ltu.se*/
 
 package items;
 
-/**
- *
- * @author Caroline
- */
+
+//Abstract superklass innehållandes gemensam information för items
 public abstract class Item {
     
-    //klassvariablarna deklareras
-    private String description;
-    private String name;
+   protected String description;
+   protected String name;
     
          
-     //metod hämtar och returerar värdet på description
+   //Returnerar värdet på description.
    public String getDescription () {
       return description; 
    }
-    //metod hämtar och returerar värdet på name
-   public String getName() {
-      return name;
-      
-   }      
    
+   //Returnerar värdet på name.
+   public String getName() {
+      return name;  
+   }      
 }
