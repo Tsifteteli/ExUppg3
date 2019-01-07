@@ -45,10 +45,22 @@ public class DungeonMaster {
       System.out.println("What is your name? Pleas type it an press [Enter]");
       
       Scanner input = new Scanner(System.in);
-      String name = input.nextLine();
-      
+      String name;
+      do {
+         try {
+            name = input.nextLine();
+         } catch (Exception e) {
+            throw new Exception("Something went wrong. Please try again.");
+         } catch (Exception e) {
+            System.out.println(e.getMessage());
+         }
+      } while (name.equals(null));
       player1 = new Player(name);
    }
+
+   /*Scanner input = new Scanner(System.in);
+      name = input.nextLine();
+      player1 = new Player(name);*/
    
    //Introducerar miljön.
    private void introduction() {
