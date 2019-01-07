@@ -5,21 +5,14 @@ Amanda Nordmark, norama-6@student.ltu.se*/
 
 package items;
 
-/**
- *
- * @author Caroline
- */
+
+//Subklass innehållandes information om potions.
 public class Potion extends Item {
     
-   //klassvariablar
-   private String description;
-   private String name;
    
    //Konstruktor
-   public Potion healthPotion (String description, String name) {
-      this.description = "en beskrivning av Potion här";
-      this.name = "Potion";
-      
-}
-   
+   public Potion(String name, String description) {
+      super.name = name;
+      super.description = description;
+   }   
 }
