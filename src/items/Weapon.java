@@ -21,6 +21,7 @@ public class Weapon extends Item {
    }
     
    //Returnerar increaseDamageby
+   @Override
    public int getIncreaseDamageBy() {
       return increaseDamageBy;  
    }
