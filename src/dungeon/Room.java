@@ -137,7 +137,7 @@ public class Room {
       
       ArrayList<String> choices = new ArrayList<>();
       
-      System.out.println("What do you want to do? Select a choice and press [Enter]");
+      System.out.println("\nWhat do you want to do? Select a choice and press [Enter]");
       if (item != null) {
          System.out.println("Pick up " + item.getName() + " [p]");
          choices.add("p");
