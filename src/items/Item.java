@@ -14,7 +14,7 @@ public abstract class Item {
     
          
    //Returnerar description.
-   public String getDescription () {
+   public String getDescription() {
       return description; 
    }
    
