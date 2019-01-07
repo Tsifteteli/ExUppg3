@@ -26,14 +26,17 @@ public class Dungeon {
    public Dungeon(Player player1) {
       this.player1 = player1;
       
-      //Adda data om items och monster till rummen.........................................!
+      //Adda data om items och monster till rummen...Monster(String name, int healthPoints, int givesDamage, String description)
+      Monster scorpilion = new Monster("Scorpilion", 8, 1, "A huge scorpilion. Three times the size of a normal lion with a scorpion tail.");
+      Monster dragon = new Monster ("Dragon", 18, 1, "A greedy and angry dragon guarding the treasure");
+      
       // new Room(String description, Item item, Monster monster, Door doorNorth, Door doorEast, Door doorSouth, Door doorWest)
       dungeon[0][0] = new Room("in a big room lit by torches sitting on the rough cave walls. A dead body with some realy nasty wounds is laying on the floor.",new Key(), null, null, new Door(true), new Door(false),null);
-		dungeon[0][1] = new Room("in another big room lit by torches.", new Weapon(), new Monster(), null, new Door(false), new Door(false), new Door(false));
+		dungeon[0][1] = new Room("in another big room lit by torches.", new Weapon(), scorpilion, null, new Door(false), new Door(false), new Door(false));
 		dungeon[0][2] = new Room("outside in the fresh air!", null, null, null, null, null, new Door(false));
 		dungeon[1][0] = new Room("in a small room lit by a few candles sitting on a table in front of you.", null, null, new Door(false), null, new Door(false),null);
 		dungeon[1][1] = new Room("in a smaller room with brick walls lit by candles in candle holders. Piles of sticks, small rocks and miscellaneous dirt is laying in the corners.", new Potion(), null, new Door(false), new Door(true), null, null);
-      dungeon[1][2] = new Room("in a gigantic hall.", new Treasure(), new Monster(), null, null, null, new Door(false));
+      dungeon[1][2] = new Room("in a gigantic hall.", new Treasure(), dragon, null, null, null, new Door(false));
       dungeon[2][0] = new Room("in a slightly bigger room that's not lit up at all. The only light is the one coming in through the door.", new Weapon(), null, new Door(false), null, null ,null);
       
       //Rummet spelaren startar i.
