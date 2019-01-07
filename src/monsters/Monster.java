@@ -14,24 +14,14 @@ public class Monster {
    private int givesDamage;
    private String description;
     
-    
-   //konstruktor Scorpilion
-   public Monster Scorpilion (String name, int healthPoints, int givesDamages, String description) {
-      name = "Scorplion";
-      healthPoints = 8;
-      givesDamage = 1;
-      description = "a big monster with a sharp tail"; 
-       return null;
-   }
    
-     //konstruktorn Dragon
-   public Monster Dragon (String name, int healthPoints, int givesDamages, String description) {
-      name = "Dragon";
-      healthPoints = 18;
-      givesDamage = 8;
-      description = "a strong undefeeted dragon"; 
-       return null;
-}
+   //Konstruktor 
+   public Monster(String name, int healthPoints, int givesDamage, String description) {
+      this.name = name;
+      this.healthPoints = healthPoints;
+      this.givesDamage = givesDamage;
+      this.description = description;   
+   }
   
    //metod get name
    public String getName() {
