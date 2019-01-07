@@ -27,10 +27,10 @@ public class Dungeon {
       this.player1 = player1;
       
       //Skapa items => (String name, String description, int increaseDamageBy) alt. (String name, String description).
-      Key key = new Key("key", "A smal sliver key.");
-      Weapon sword = new Weapon("Sword", "A shiny sword of steel.", 2);
-      Potion potion = new Potion("Health potion", "A small bottle with glittering red liquid inside.");
-      Treasure treasure = new Treasure("Treasure", "A big chest filled with gold and jewels.");
+      Key key = new Key("key", "A smal sliver key is laying on the floor.");
+      Weapon sword = new Weapon("Sword", "A shiny sword of steel is hanging on the wall.", 2);
+      Potion potion = new Potion("Health potion", "There is something red laying amongst the rocks on the floor. A small bottle with glittering red liquid inside. It looks like a health potion");
+      Treasure treasure = new Treasure("Treasure", "A big chest filled with gold and jewels is standing on the far side of the room.");
       Weapon dagger = new Weapon("Dagger", "There is something glimmering in the corner. A pointy dagger is laying on the floor.", 1);
 
       //Skapa monster => (String name, int healthPoints, int givesDamage, String description).
