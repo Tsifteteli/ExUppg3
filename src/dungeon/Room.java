@@ -10,6 +10,7 @@ import items.*;
 import monsters.*;
 import java.util.ArrayList;
 
+
 //Klass innehållandes information om och saker som händer i rummen.
 public class Room {
    
