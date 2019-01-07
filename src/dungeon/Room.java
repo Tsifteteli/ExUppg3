@@ -52,7 +52,7 @@ public class Room {
          System.out.println("There is a door to the west.");
       }
       if (monster != null) {
-         System.out.println(monster.getDescription);
+         System.out.println(monster.getDescription());
          if (monster.getName() == "Dragon")
             System.out.println(
                   " .~))>>\n"+
@@ -120,7 +120,7 @@ public class Room {
          if (playerHealth <= 0) {
             break;
          }
-         System.out.println("You attack the " + monster.getName + " and do " + playerGivesDamage + " damage");
+         System.out.println("You attack the " + monster.getName() + " and do " + playerGivesDamage + " damage");
          monster.setHealthPoints(monster.getHealthPoints() - playerGivesDamage);
          
       } while (monster.getHealthPoints() > 0);
