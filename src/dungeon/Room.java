@@ -89,8 +89,6 @@ public class Room {
                   " :bb ,' \n"+
                   " ~~~~\n");
       }
-      System.out.println(" ");
-      
    }
 
    //Returnerar värdet på item.
