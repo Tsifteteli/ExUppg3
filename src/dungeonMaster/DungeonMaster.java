@@ -44,7 +44,7 @@ public class DungeonMaster {
       System.out.println("Welcomme to Dungeon Master!"); 
       System.out.println("What is your name? Pleas type it an press [Enter]");
       
-      Scanner input = new Scanner(System.in);
+      /*Scanner input = new Scanner(System.in);
       String name;
       do {
          try {
@@ -56,11 +56,13 @@ public class DungeonMaster {
          }
       } while (name.equals(null));
       player1 = new Player(name);
-   }
+      */
 
-   /*Scanner input = new Scanner(System.in);
+      Scanner input = new Scanner(System.in);
+      String name;
       name = input.nextLine();
-      player1 = new Player(name);*/
+      player1 = new Player(name);
+   }
    
    //Introducerar miljön.
    private void introduction() {
