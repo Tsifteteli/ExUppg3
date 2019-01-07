@@ -101,7 +101,7 @@ public class DungeonMaster {
                "    |'-._   || |'|_.-'_.-'\n"+
                "    '-._'-.|| |' `_.-'\n"+
                "        '-.||_/.-'\n");
-         System.out.println("Congratulations " + player1.getName() + "! You have won the game. You are a true Dungeon Master!");
+         System.out.println("You walk out from the dungeon dragging the treasure with you. Congratulations " + player1.getName() + "! You have won the game. You are a true Dungeon Master!");
       }
       else {
          System.out.println("You are dead... RIP " + player1.getName() + "... Better luck next life...");
