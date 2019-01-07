@@ -102,6 +102,7 @@ public class Dungeon {
             System.out.println(e.getMessage());
          }       
       } while(!choicesGiven.contains(choice));
+      System.out.println(" ");
       return choice;        
    }
    
@@ -122,7 +123,6 @@ public class Dungeon {
                case "d":
                   player1.drinkPotion();
       }
-      System.out.println(" ");
    }
    
    //Flyttar spelaren mellan två rum.
