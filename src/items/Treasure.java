@@ -5,14 +5,12 @@ Amanda Nordmark, norama-6@student.ltu.se*/
 
 package items;
 
-/**
- *
- * @author Caroline
- */
+
+//subklass innehållandes information om skatter 
 public class Treasure extends Item {
     
-       
-    //Konstruktor
+    
+   //Konstruktor
    public Treasure(String name, String description) {
       super.name = name;
       super.description = description;
