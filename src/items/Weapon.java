@@ -11,24 +11,20 @@ package items;
  */
 public class Weapon extends Item {
     
-    //klassvariabel 
-    private String description;
-    private String name;
+    //konstruktorn
     private int increaseDamageBy;
     
   
-    //Konstruktor
-    public Weapon weapone (String description, String name, int increaseDamageBy) {
-      description = description;
-      name = name;
-      increaseDamageBy = 2; 
-      {
-          
-      }  
-{      
+    //Konstruktor 
+    public Weapon(String name, String description, int increaseDamageBy) {
+      super.name = name;
+      super.description = description;
+      this.increaseDamageBy = increaseDamageBy;         
+    }
+    
     //metod get increaseDamageby
-   public int getIncreaseDamageBy () {
+   public int getIncreaseDamageBy() {
       return increaseDamageBy;  
-}
-}
 
+    }
+}
