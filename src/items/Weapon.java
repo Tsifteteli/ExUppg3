@@ -5,26 +5,23 @@ Amanda Nordmark, norama-6@student.ltu.se*/
 
 package items;
 
-/**
- *
- * @author Caroline
- */
+
+//Subklass innehållandes information om vapen. 
 public class Weapon extends Item {
     
-    //konstruktorn
-    private int increaseDamageBy;
+   //Konstruktorn
+   private final int increaseDamageBy;
     
   
-    //Konstruktor 
-    public Weapon(String name, String description, int increaseDamageBy) {
+   //Konstruktor 
+   public Weapon(String name, String description, int increaseDamageBy) {
       super.name = name;
       super.description = description;
       this.increaseDamageBy = increaseDamageBy;         
-    }
+   }
     
-    //metod get increaseDamageby
+   //Returnerar increaseDamageby
    public int getIncreaseDamageBy() {
       return increaseDamageBy;  
-
-    }
+   }
 }
