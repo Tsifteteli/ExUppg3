@@ -6,7 +6,7 @@ Amanda Nordmark, norama-6@student.ltu.se*/
 package items;
 
 
-//Subklass innehållandes information om nycklar
+//Subklass innehållandes information om nycklar.
 public class Key extends Item {
  
    
