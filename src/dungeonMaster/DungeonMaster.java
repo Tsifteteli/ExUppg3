@@ -36,8 +36,6 @@ public class DungeonMaster {
       gameEnding();
    }
    
-   
-   
    //Inleder spelet och skapar en player.
    private void beginning() {
       
