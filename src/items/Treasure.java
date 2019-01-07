@@ -11,14 +11,11 @@ package items;
  */
 public class Treasure extends Item {
     
-        //klassvariablar
-   private String description;
-   private String name;
-   
-   //Konstruktor
-   public Treasure (String description, String name) {
-      this.description = "beskrivning av treasure";
-      this.name = "Treasure";  
-}
-   
-}
+       
+    //Konstruktor
+   public Treasure(String name, String description) {
+      super.name = name;
+      super.description = description;
+   }  
+}  
+
