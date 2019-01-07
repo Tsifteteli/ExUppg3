@@ -86,7 +86,7 @@ public class Dungeon {
             choice = input.next();
             choice.toLowerCase();
             if (!choicesGiven.contains(choice)) {
-               throw new Exception("Ej giltigt val. Var god ange möjligt val.");
+               throw new Exception("Not a valid choice. Please try a given choice.");
             }
          } catch (Exception e) {
             System.out.println(e.getMessage());
