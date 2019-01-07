@@ -10,6 +10,7 @@ import dungeon.Room;
 import items.*;
 import java.util.ArrayList;
 
+
 //Klass innehållandes saker rörandes spelaren.
 public class Player {
    
