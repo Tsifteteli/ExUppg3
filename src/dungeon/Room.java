@@ -163,7 +163,7 @@ public class Room {
    
    //Returnerar huruvida spelaren kan öppna dörren och passera till nästa rum eller ej.
    public boolean openDoor(String choice, boolean hasKey) {
-      Door currentDoor;
+      Door currentDoor = doorNorth;
       switch (choice){
 					case "n":
                   currentDoor = doorNorth;
