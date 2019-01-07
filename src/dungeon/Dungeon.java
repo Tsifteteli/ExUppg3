@@ -54,8 +54,8 @@ public class Dungeon {
    
    //Kör spelordningen.
    public void playGame() {
+      player1.setPosition(currentRoom);
       do {
-         player1.setPosition(currentRoom);
          currentRoom.roomNarrative();
          
          Monster currentMonster = currentRoom.getMonster();
@@ -70,6 +70,8 @@ public class Dungeon {
          
          String choice = playerChoice(choicesGiven);
          executeChoice(choice);
+         
+         player1.setPosition(currentRoom);
          
       } while(playerWin() == false);
    }
