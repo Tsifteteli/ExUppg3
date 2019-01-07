@@ -9,8 +9,8 @@ package items;
 //Abstract superklass innehållandes gemensam information för items
 public abstract class Item {
     
-   protected String description;
    protected String name;
+   protected String description;
     
          
    //Returnerar description.
