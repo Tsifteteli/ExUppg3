@@ -44,23 +44,15 @@ public class DungeonMaster {
       System.out.println("Welcomme to Dungeon Master!"); 
       System.out.println("What is your name? Pleas type it an press [Enter]");
       
-      /*Scanner input = new Scanner(System.in);
-      String name;
+      Scanner input = new Scanner(System.in);
+      String name = "name";
       do {
          try {
             name = input.nextLine();
-         } catch (Exception e) {
-            throw new Exception("Something went wrong. Please try again.");
-         } catch (Exception e) {
-            System.out.println(e.getMessage());
+         } catch (RuntimeException e) {
+            System.out.println("Something went wrong. Please try again.");
          }
-      } while (name.equals(null));
-      player1 = new Player(name);
-      */
-
-      Scanner input = new Scanner(System.in);
-      String name;
-      name = input.nextLine();
+      } while (name.equals("name"));
       player1 = new Player(name);
    }
    
@@ -80,6 +72,7 @@ public class DungeonMaster {
    
    //Slutet på spelet.
    private void gameEnding() {
+      
       if (smalDungeon.playerWin() == true) {
          System.out.println(
             "                  _.--.\n"+
