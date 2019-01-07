@@ -5,6 +5,7 @@ Amanda Nordmark, norama-6@student.ltu.se*/
 
 package monsters;
 
+
 //Klass innehållandes information om monster.
 public class Monster {
     
@@ -23,28 +24,28 @@ public class Monster {
       this.description = description;   
    }
   
-   //metod get name
+   //Returnerar name
    public String getName() {
       return name;
    }
 
- //metod set healtPoints 
-   public void setHealthPoints (int healthPoints) {
+   //Anger nytt värde på healtPoints 
+   public void setHealthPoints(int healthPoints) {
        this.healthPoints = healthPoints;
    }
 
-   //metod get healthPoints
-   public int getHealthPoints () {
+   //Returnerar healthPoints
+   public int getHealthPoints() {
       return healthPoints;
    }
 
-   //metod get givesDamage
-   public int getGivesDamage () {
+   //ReturnerargivesDamage
+   public int getGivesDamage() {
       return givesDamage;
    }
 
-   //metod get description
-   public String getDescription () {
+   //Returnerar description
+   public String getDescription() {
       return description; 
    }
 }
