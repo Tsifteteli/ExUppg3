@@ -31,7 +31,7 @@ public class Dungeon {
       Weapon sword = new Weapon("Sword", "A shiny sword of steel.", 2);
       Potion potion = new Potion("Health potion", "A small bottle with glittering red liquid inside.");
       Treasure treasure = new Treasure("Treasure", "A big chest filled with gold and jewels.");
-      Weapon dagger = new Weapon("Dagger", "A pointy dagger.", 1);
+      Weapon dagger = new Weapon("Dagger", "There is something glimmering in the corner. A pointy dagger is laying on the floor.", 1);
 
       //Skapa monster => (String name, int healthPoints, int givesDamage, String description).
       Monster scorpilion = new Monster("Scorpilion", 8, 1, "A huge scorpilion. Three times the size of a normal lion with a scorpion tail.");
@@ -122,6 +122,7 @@ public class Dungeon {
                case "d":
                   player1.drinkPotion();
       }
+      System.out.println(" ");
    }
    
    //Flyttar spelaren mellan två rum.
