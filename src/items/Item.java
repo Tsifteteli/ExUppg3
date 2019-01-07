@@ -13,12 +13,12 @@ public abstract class Item {
    protected String name;
     
          
-   //Returnerar värdet på description.
+   //Returnerar description.
    public String getDescription () {
       return description; 
    }
    
-   //Returnerar värdet på name.
+   //Returnerar name.
    public String getName() {
       return name;  
    }      
