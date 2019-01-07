@@ -87,7 +87,7 @@ public class Room {
                   " (((( __.-~bb.-~\n"+
                   " .' b .~~\n"+
                   " :bb ,' \n"+
-                  " ~~~~\n");
+                  " ~~~~");
       }
    }
 
@@ -113,6 +113,7 @@ public class Room {
    
    //Räknar ut resultatet av en strid mellan spelaren och ett monster.
    public int resolveBattle(int playerHealth, int playerGivesDamage) {
+      System.out.println(" ");
       do {
          System.out.println("The " + monster.getName() + " attacks you and does " + monster.getGivesDamage() + " damage.");
          playerHealth -= monster.getGivesDamage();
