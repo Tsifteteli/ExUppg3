@@ -6,7 +6,7 @@ Amanda Nordmark, norama-6@student.ltu.se*/
 package items;
 
 
-//Subklass innehållandes information om potions.
+//Subklass innehållandes information som rör  potions.
 public class Potion extends Item {
     
    
