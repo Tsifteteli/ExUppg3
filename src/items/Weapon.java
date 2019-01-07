@@ -19,7 +19,7 @@ public class Weapon extends Item {
       this.increaseDamageBy = increaseDamageBy;         
    }
     
-   //Returnerar increaseDamageby
+   //Returnerar increaseDamageby.
    @Override
    public int getIncreaseDamageBy() {
       return increaseDamageBy;  
