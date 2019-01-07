@@ -9,10 +9,10 @@ package monsters;
 public class Monster {
     
    //klassvariablerna deklareras
-   private String name;
+   private final String name;
    private int healthPoints;
-   private int givesDamage;
-   private String description;
+   private final int givesDamage;
+   private final String description;
     
    
    //Konstruktor 
