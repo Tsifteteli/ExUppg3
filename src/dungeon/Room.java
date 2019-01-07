@@ -176,8 +176,7 @@ public class Room {
                   break;
 					case "w":
                   currentDoor = doorWest;
-      }
-                  
+      }           
       if (currentDoor.isLocked() == true && hasKey == true) { //Dörren är låst, men spelaren har nyckel.
          currentDoor.setLocked(false);
          System.out.println("The door is locked, but the key you found fits perfectly in the lock. You turn the key and the door opens with a loud squeaky sound.");
