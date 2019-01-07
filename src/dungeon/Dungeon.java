@@ -79,7 +79,7 @@ public class Dungeon {
       for(Item item : player1.getInventory()) {
          if (item instanceof Potion) {
             if (player1.getHealthPoints() < 10) {
-               System.out.println("Drink health potion [d] (You have " + player1.getHealthPoints() + " health points.");
+               System.out.println("Drink health potion [d] (You have " + player1.getHealthPoints() + " health points)");
                choicesGiven.add("d");
             }
          }
