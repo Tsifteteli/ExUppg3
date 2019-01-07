@@ -139,7 +139,7 @@ public class Room {
       
       System.out.println("What do you want to do? Select a choice and press [Enter]");
       if (item != null) {
-         System.out.println("Pick up" + item.getName() + " [p]");
+         System.out.println("Pick up " + item.getName() + " [p]");
          choices.add("p");
       }
       if (doorNorth != null) {
@@ -158,6 +158,7 @@ public class Room {
          System.out.println("Go west [w]");
          choices.add("w");
       }
+      System.out.println(" ");
       return choices;
    }
    
