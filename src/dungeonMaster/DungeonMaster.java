@@ -104,7 +104,7 @@ public class DungeonMaster {
          System.out.println("You walk out from the dungeon dragging the treasure with you. Congratulations " + player1.getName() + "! You have won the game. You are a true Dungeon Master!");
       }
       else {
-         System.out.println("You are dead... RIP " + player1.getName() + "... Better luck next life...");
+         System.out.println("\nYou are dead... RIP " + player1.getName() + "... Better luck next life...");
       }
    }    
 }
