@@ -6,7 +6,7 @@ Amanda Nordmark, norama-6@student.ltu.se*/
 package items;
 
 
-//Abstract superklass innehållandes gemensam information för items
+//Abstract superklass innehållandes gemensam information för items.
 public abstract class Item {
     
    protected String name;
