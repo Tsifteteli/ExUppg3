@@ -75,7 +75,7 @@ public class DungeonMaster {
               + "The whole mountain trembles, and the entrance to the "
               + "cave collapses behind you.\n"
               + "That kind of roar can only come from a dragon. "
-              + "You better be careful...");
+              + "You better be careful...\n");
    }
    
    //Slutet på spelet.
