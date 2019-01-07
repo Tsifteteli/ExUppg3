@@ -40,10 +40,16 @@ public class Player {
       this.healthPoints = healthPoints;
    }
    
-   //Återställer spelarens health points till 10.
+   //Återställer spelarens health points till 10 och tar bort ett potion ur inventory.
    public void drinkPotion() {
       healthPoints = 10;
       System.out.println("You drink the potion and is now fully healed to 10 health points.");
+      for(Item item : inventory) {
+         if (item instanceof Potion) {
+            inventory.remove(item);
+            break;
+         }
+      }   
    }
    
    //Returnerar totala skadan en spelare gör, inkl. eventuellt vapen. Väljer det bästa vapnet om spelaren har flera.
