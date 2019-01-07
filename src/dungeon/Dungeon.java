@@ -34,8 +34,8 @@ public class Dungeon {
       Weapon dagger = new Weapon("Dagger", "There is something glimmering in the corner. A pointy dagger is laying on the floor.", 1);
 
       //Skapa monster => (String name, int healthPoints, int givesDamage, String description).
-      Monster scorpilion = new Monster("Scorpilion", 8, 1, "A huge scorpilion. Three times the size of a normal lion with a scorpion tail.");
-      Monster dragon = new Monster ("Dragon", 18, 1, "A greedy and angry dragon guarding the treasure");
+      Monster scorpilion = new Monster("Scorpiolion", 8, 1, "A huge scorpiolion is pacing back and forth. Three times the size of a normal lion with a scorpion tail.");
+      Monster dragon = new Monster ("Dragon", 18, 1, "There is a greedy and angry dragon guarding the treasure. It roars and spit fire.");
       
       //Populera dungeon:en med rum inkl innehåll => (String description, Item item, Monster monster, Door doorNorth, Door doorEast, Door doorSouth, Door doorWest).
       dungeon[0][0] = new Room("in a big room lit by torches sitting on the rough cave walls. A dead body with some realy nasty wounds is laying on the floor.", key, null, null, new Door(true), new Door(false),null);
