@@ -96,7 +96,9 @@ public class Dungeon {
       do {
          try {
             choice = input.next();
-            choice.toLowerCase();
+            choice = choice.toLowerCase();
+            System.out.println(choice);
+            
             if (!choicesGiven.contains(choice)) {
                throw new Exception("Not a valid choice. Please try a given choice.");
             }

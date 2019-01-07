@@ -188,7 +188,7 @@ public class Room {
          return false;
       }
       else { //Dörren är ej låst.
-         System.out.println("The door is unlocked. You open it and go thrue the door.");
+         System.out.println("The door is unlocked. You open it and go through the door.");
       }
       return true;
    }
