@@ -158,7 +158,6 @@ public class Room {
          System.out.println("Go west [w]");
          choices.add("w");
       }
-      System.out.println(" ");
       return choices;
    }
    
