@@ -102,7 +102,7 @@ public class Dungeon {
             System.out.println(e.getMessage());
          }       
       } while(!choicesGiven.contains(choice));
-      System.out.println(" ");
+      System.out.println("~.~.~.~.~.~.~.~.~.~.~.~.~.~\n");
       return choice;        
    }
    
