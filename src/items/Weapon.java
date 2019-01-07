@@ -6,10 +6,9 @@ Amanda Nordmark, norama-6@student.ltu.se*/
 package items;
 
 
-//Subklass innehållandes information om vapen. 
+//Subklass innehållandes information som rör vapen. 
 public class Weapon extends Item {
     
-   //Konstruktorn
    private final int increaseDamageBy;
     
   
