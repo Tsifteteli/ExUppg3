@@ -5,25 +5,14 @@ Amanda Nordmark, norama-6@student.ltu.se*/
 
 package items;
 
-/**
- *
- * @author Caroline
- */
+
+//Subklass innehållandes information om nycklar
 public class Key extends Item {
-   
-    //klassvariablar
-   private String description;
-   private String name;
  
    
    //Konstruktor
-   public Key(String description, String name) {
-      this.description = "beskrivning av key här";
-      this.name = "Key";
-      
-      
-      
-}
-   
-   
+   public Key(String name, String description) {
+      super.name = name;
+      super.description = description;
+   }  
 }
