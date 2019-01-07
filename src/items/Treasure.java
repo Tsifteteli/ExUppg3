@@ -6,7 +6,7 @@ Amanda Nordmark, norama-6@student.ltu.se*/
 package items;
 
 
-//Subklass innehållandes information om skatter. 
+//Subklass innehållandes information som rör skatter. 
 public class Treasure extends Item {
     
     
