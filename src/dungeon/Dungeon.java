@@ -89,7 +89,7 @@ public class Dungeon {
    
    //Läser in spelarens val och kolla om det är giltigt.
    private String playerChoice(ArrayList choicesGiven) {
-      String choice;
+      String choice = "choice";
       Scanner input = new Scanner(System.in);
       do {
          try {
